@@ -1,1 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* 
+    Form Container
+    ----------------------------------------------------------------------------------
+*/
+.form-container {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./assets/bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 0;
+}
+.form-container form {
+    background-image: linear-gradient(to bottom, #7579f6, #a23be7);
+    border-radius: 30px;
+}
+.form-container form header {
+    text-align: center;
+    color: #fff;
+}
+.form-container form header .icon,
+.form-container form header .profile {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container form header .profile img {
+    border-radius: 50%;
+}
+.form-container form input:not([type="checkbox"]) {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+    color: rgb(238, 227, 227);
+}
+.form-container form input:not([type="checkbox"])::placeholder {
+    color: rgb(238, 227, 227);
+}
+.form-container form .form-group {
+    margin-top: 15px;
+    padding: 5px 10px;
+    border-bottom: 1px solid rgb(221, 217, 217);
+}
+.form-container form .form-group.remember-me {
+    border-bottom: none;
+    color: rgb(238, 227, 227);
+}
+.form-container form .submit-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+.form-container form .submit-btn button {
+    border: none;
+    border-radius: 30px;
+    background: rgb(238, 227, 227);
+    padding: 7px 25px;
+    font-weight: bold;
+}
+
+.form-container form footer {
+    text-align: center;
+    margin-top: 4rem;
+}
+.form-container form footer a {
+    color: rgb(238, 227, 227);
+}
+.form-container form .actions button {
+    border: none;
+    border-radius: 30px;
+    background: rgb(238, 227, 227);
+    padding: 7px 25px;
+    font-weight: bold;
+}
+.form-container form .error {
+    color: #dc0b0b;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 
+    Dashboard
+    ----------------------------------------------------------------------------------
+*/
+section.dashboard header {
+    background: #453681;
+}
+section.dashboard header img {
+    border-radius: 50%;
+}
+section.dashboard header button {
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+    color: #453681;
+}
+section.dashboard a.new-user {
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    color: #453681;
+    width: max-content;
+    transition: background-color 0.3s;
+}
+section.dashboard a.new-user:hover {
+    background-color: rgb(239, 239, 239);
+}
+section.dashboard a.profile-card {
+    border-radius: 5px;
+}
+section.dashboard a.profile-card img {
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.75);
+}
+
+
+/* 
+    Notification
+    ----------------------------------------------------------------------------------
+*/
+#notification {
+    position: fixed;
+    display: none;
+    z-index: 100;
+    top: 10px;
+    right: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgb(44, 202, 44);
+    -webkit-box-shadow: 0px 0px 50px -20px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 0px 50px -20px rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 50px -20px rgba(255, 255, 255, 0.75);
+}
+#notification.show {
+    display: block;
+    
+}

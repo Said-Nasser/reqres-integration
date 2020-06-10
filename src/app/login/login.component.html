@@ -1,0 +1,47 @@
+<section class="form-container d-flex justify-content-center align-items-center">
+  <form [formGroup]="form" (submit)="login(form.value)"
+    class="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto d-flex flex-column py-5 px-4 px-sm-5">
+    <header class="mb-4">
+      <div class="icon">
+        <img src="./assets/mountain.png" alt="logo" width="50px">
+      </div>
+      <h1>LOG IN</h1>
+    </header>
+    <div class="form-group d-flex">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: #fff; width: 10px;">
+        <path
+          d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" />
+      </svg>
+      <input type="email" name="email" id="email" class="flex-fill" placeholder="Username" formControlName="email">
+      <br>
+    </div>
+    <div class="error" *ngIf="form.get('email').hasError('pattern')">
+      This field must match the pattern: email@example.com!
+    </div>
+    <div class="error" *ngIf="form.get('email').hasError('required')">
+      This field is required!
+    </div>
+    <div class="form-group d-flex">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: #fff; width: 10px;">
+        <path
+          d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zM264 392c0 22.1-17.9 40-40 40s-40-17.9-40-40v-48c0-22.1 17.9-40 40-40s40 17.9 40 40v48zm32-168H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z" />
+      </svg>
+      <input type="password" name="password" id="password" class="flex-fill" placeholder="Password"
+        formControlName="password">
+    </div>
+    <div class="error" *ngIf="form.get('password').hasError('required')">
+      This field is required!
+    </div>
+    <div class="form-group remember-me">
+      <label for="remember-me"><input type="checkbox" name="remember_me" id="remember-me"> Remember me</label>
+    </div>
+    
+    
+    <div class="submit-btn">
+      <button type="submit" class="btn" [disabled]="!form.valid">Login</button>
+    </div>
+    <footer>
+      <a href="#">Forget Password?</a>
+    </footer>
+  </form>
+</section>
